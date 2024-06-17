@@ -14,7 +14,7 @@ function draw_object(canvas: HTMLCanvasElement, context: CanvasRenderingContext2
 }
 
 function update_coord(coords: number[], v:number[], t:number){
-    coords[0] = Math.floor(coords[0] + v[0]*t);
+    coords[0] = Math.floor(coords[0] + v[0]*t*t);
     coords[1] = Math.floor(coords[1] + v[1]*t);
 }
 
@@ -28,7 +28,7 @@ start_button.onclick = function (){
     let v:number[] = [0, 0];
     let t:number = 0; // initial time
     let r: number = 10; //circle radius
-    let dt: number = 800; //time interval (ms)
+    let dt: number = 100; //time interval (ms)
     v[0] = velocity*Math.cos(Math.PI*angle/180);
     v[1] = velocity*Math.sin(Math.PI*angle/180);
 

@@ -1,6 +1,3 @@
--- create database bd_mat1;
--- \c bd_mat1;
-
 create table usuario(nome varchar(100), cidade varchar(100));
 create table cidade(nome varchar(100), estado varchar(100));
 

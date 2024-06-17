@@ -13,9 +13,7 @@ console.log("\n \n \n ********** ");
 let my_dog = new Dog();
 my_dog.age = 2;
 console.log("My dog has ", my_dog.age, " years.");
-
 my_dog.grow();
-
 console.log("Next year, my dog will have ", my_dog.age, " years.");
 console.log(my_dog.bark());
 

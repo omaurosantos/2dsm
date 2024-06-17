@@ -17,6 +17,6 @@ class ArithmeticProgression{
     }
 }
 
-let my_ap = new ArithmeticProgression(1, 3);
+let my_ap = new ArithmeticProgression(2, 3);
 console.log("First term: ", my_ap.get_nth_term(1));
-console.log("Fourth term: ", my_ap.get_nth_term(300));
+console.log("Fourth term: ", my_ap.get_nth_term(50));
