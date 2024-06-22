@@ -1,0 +1,30 @@
+<%# Loads the entire contents of header.ejs%>
+<%-include('base_header') -%>
+
+<form method="post" action="/persist">
+    Dados para persistir no banco de dados: <br/>
+    <label for="nature">Natureza do Chamado:</label>
+    <select id="nature" name="nature">
+      <option value="dúvida">Dúvida</option>
+      <option value="problema">Resolução de Problemas</option>
+    </select><br/>
+    <label for="description">Descrição:</label>
+    <input type="text" id="description" name="description" required>
+    <br>
+    Nome: <input name="name" type="text" /><br/>
+    CPF: <input name="cpf" type="text" /><br/>
+    Serviço de Provedor:
+    <select name="database">
+        <option value="postgres">POSTGRESQL</option>
+        <option value="mongodb">MONGODB</option>
+        <option value="mariadb">MARIADB</option>
+    </select><br/>
+    <input type="submit" value="Enviar">
+</form>
+<form method="post" action="/list-calls">
+    <button type="submit">Listar Chamados</button>
+</form>
+    
+<%# Includes the entire contents of footer.ejs %>
+<%- include('base_footer') -%>
+

@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@types/mongodb": "^4.0.7",
+    "@types/pg": "^8.11.6",
+    "@types/prompt-sync": "^4.2.3",
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "http-proxy-middleware": "^3.0.0",
+    "mariadb": "^3.3.1",
+    "mongodb": "^6.6.2",
+    "pg": "^8.11.5",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
+  }
+}

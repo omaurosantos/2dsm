@@ -1,0 +1,52 @@
+<%- include('base_header') -%>
+
+<form method="get">
+    <h1>Lista de Chamados</h1>
+
+    <div>
+        <h2>PostgreSQL</h2>
+        <ul>
+            <% if (calls && calls.postgres) { %>
+                <% calls.postgres.forEach(call => { %>
+                    <li><strong>Natureza:</strong> <%= call.natureza %>, <strong>Descrição:</strong> <%= call.descricao %>, <strong>Nome:</strong> <%= call.nome %>, <strong>CPF:</strong> <%= call.cpf %></li>
+                <% }); %>
+            <% } else { %>
+                <li>Nenhum chamado encontrado para PostgreSQL.</li>
+            <% } %>
+        </ul>
+    </div>
+
+    <div>
+        <h2>MongoDB</h2>
+        <ul>
+            <% if (calls && calls.mongodb) { %>
+                <% calls.mongodb.forEach(call => { %>
+                    <li><strong>Natureza:</strong> <%= call.natureza %>, <strong>Descrição:</strong> <%= call.descricao %>, <strong>Nome:</strong> <%= call.name %>, <strong>CPF:</strong> <%= call.cpf %></li>
+                <% }); %>
+            <% } else { %>
+                <li>Nenhum chamado encontrado para MongoDB.</li>
+            <% } %>
+        </ul>
+    </div>
+
+    <div>
+        <h2>MariaDB</h2>
+        <ul>
+            <% if (calls && Array.isArray(calls.mariadb) && calls.mariadb.length > 0) { %>
+                <% calls.mariadb.forEach(call => { %>
+                    <li>
+                        <strong>Natureza:</strong> <%= call.natureza %>, 
+                        <strong>Descrição:</strong> <%= call.descricao %>, 
+                        <strong>Nome:</strong> <%= call.name %>, 
+                        <strong>CPF:</strong> <%= call.cpf %>
+                    </li>
+                <% }); %>
+            <% } else { %>
+                <li>Nenhum chamado encontrado para MariaDB.</li>
+            <% } %>
+        </ul>
+    </div>
+    
+</form>
+
+<%- include('base_footer') -%>
